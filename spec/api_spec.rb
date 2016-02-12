@@ -82,8 +82,6 @@ describe ZipMoney::Api do
       params.consumer.title      = checkout_json["consumer"]["title"]
 
       response = checkout.do()      
-      puts response.toHash
-
       response.isSuccess.should be_truthy
     end 
 
@@ -150,7 +148,6 @@ describe ZipMoney::Api do
       params.consumer.title      = quote_json["consumer"]["title"]
 
       response = quote.do()
-      puts response.toHash
       response.isSuccess.should be_truthy
     
     end 
@@ -181,7 +178,6 @@ describe ZipMoney::Api do
         capture.params.order.detail[0].id    = item[0]["id"]
 
       response = capture.do()
-      p response.toHash
       response.isSuccess.should be_truthy
 
     end 
@@ -214,7 +210,6 @@ describe ZipMoney::Api do
         refund.params.order.detail[0].id  = item[0]["id"]
 
       response = refund.do()
-      p response.toHash
       response.isSuccess.should be_truthy
     end 
 
@@ -244,7 +239,6 @@ describe ZipMoney::Api do
         cancel.params.order.detail[0].id  = item[0]["id"]
 
       response = cancel.do()
-      p response.toHash
       response.isSuccess.should be_truthy
     end 
 
@@ -260,7 +254,6 @@ describe ZipMoney::Api do
         query.params.orders[0].id     = @order_id
 
       response = query.do()
-      p response.toHash
       response.isSuccess.should be_truthy
     end 
 end	
