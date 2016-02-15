@@ -1,9 +1,9 @@
 module ZipMoney
 	class Configuration
 		
-		API_VERSION  = "1.0.0"
+		API_VERSION  = "1.0.1"
 		API_PLATFORM = "ruby"
-		API_NAME	 = "zipMoney Ruby SDK"
+		API_NAME	   = "zipMoney Ruby SDK"
 
     ENV_LIVE_API_URL = "https://api.zipmoney.com.au/v1/"
     ENV_TEST_API_URL = "https://api.sandbox.zipmoney.com.au/v1/"
