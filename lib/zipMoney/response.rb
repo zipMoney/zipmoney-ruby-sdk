@@ -28,7 +28,8 @@ module ZipMoney
     # @return OpenStruct
     def toObject
       raise ResponseError, "Response body doesnot exist" if @_responseBody.nil? || @_responseBody.empty?
-      responseObject = JSON.parse(@_responseBody, object_class: OpenStruct)
+      responseObjectHash = JSON.parse(@_responseBody, object_class: OpenStruct)
+      responseObject = OpenStruct.new(responseObjectHash)
       responseObject
     end
       
